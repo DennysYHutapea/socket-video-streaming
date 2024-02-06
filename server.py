@@ -16,7 +16,7 @@ def run():
     server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     
     host_name = socket.gethostname()
-    host_ip = socket.gethostbyname(host_name)
+    host_ip = "192.168.229.179"
     port = 10050
     print('Host IP: ', host_ip)
     
@@ -49,7 +49,11 @@ def run():
                     key = cv2.waitKey(10)
                     if key == 13:
                         client_socket.close()
-        
+                        
+                if not success:
+                    client_socket.close()
+                    break
+
 
 
 if __name__ == "__main__":

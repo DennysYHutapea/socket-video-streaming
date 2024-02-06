@@ -6,7 +6,7 @@ import imutils
 
 def run():
     client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    host_ip = '192.168.56.1'
+    host_ip = "192.168.229.179"
     port = 10050
 
     client_socket.connect((host_ip, port))
